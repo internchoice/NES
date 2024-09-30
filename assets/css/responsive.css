@@ -1,0 +1,109 @@
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px; /* Adjust as needed */
+        max-width: 100%; /* Ensures the logo fits in the view */
+    }
+    
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically on mobile */
+    }
+    
+    .nav-contact-detail {
+        margin: 5px 0; /* Adjust margin for mobile */
+    }
+    .carousel-item {
+        height: 300px; /* Reduce height on smaller screens */
+    }
+    
+    .cap {
+        right: 5% !important; /* Adjust positioning for smaller screens */
+        left: 5% !important;
+        bottom: 10px !important; /* Reduce space from the bottom */
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.25rem; /* Smaller font size */
+    }
+    
+    .carousel-caption p {
+        font-size: 0.875rem; /* Smaller font size */
+    }
+
+
+    /*contact*/
+    .contact-info h3 {
+        font-size: 1.3rem; /* Smaller heading for mobile devices */
+      }
+      .contact-info a {
+        font-size: 14px; /* Smaller font size for mobile links */
+      }
+      .card-body i {
+        font-size: 1.8rem; /* Adjust icon size for mobile */
+      }
+      .form-container {
+        margin: 15px; /* Reduce margin for mobile */
+      }
+}
+
+
+@media (max-width: 576px) {
+    .impnews-marquee {
+        font-size: 14px; /* Smaller font size on extra small devices */
+    }
+
+    .nav-contact-detail {
+        font-size: 14px; /* Smaller text on mobile */
+    }
+    .logo img {
+        height: 50px !important; /* Smaller size for extra small devices */
+    }
+    .carousel-item {
+        height: 250px; /* Further reduce height on extra small screens */
+    }
+    
+    .cap {
+        right: 2%; /* Adjust positioning */
+        left: 2%;
+        bottom: 5px; /* Further reduce space from the bottom */
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1rem; /* Even smaller font size */
+    }
+    
+    .carousel-caption p {
+        font-size: 0.75rem; /* Even smaller font size */
+    }
+
+       /*contact*/
+       .contact-container {
+        margin-top: 20px; /* Reduce top margin for extra small screens */
+      }
+      .card-body i {
+        font-size: 1.5rem; /* Smaller icon size for extra small devices */
+      }
+      .contact-info h3 {
+        font-size: 1.2rem; /* Even smaller heading for extra small screens */
+      }
+      .contact-info a {
+        font-size: 12px; /* Small font size for links */
+      }
+      .form-container {
+        margin: 10px 5px; /* Tighter form layout for extra small screens */
+      }
+      .card {
+        margin-bottom: 15px; /* Add spacing between cards */
+      }
+}
+
+@media (max-width: 992px) {
+    .contact-info h3 {
+      font-size: 1.5rem; /* Adjust heading size for tablets */
+    }
+    .contact-info a {
+      font-size: 16px; /* Adjust link font size for tablets */
+    }
+    .form-container {
+      margin: 20px; /* Adjust form spacing for smaller devices */
+    }
+  }
