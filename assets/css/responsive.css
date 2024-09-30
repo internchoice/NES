@@ -28,7 +28,9 @@
     .carousel-caption p {
         font-size: 0.875rem; /* Smaller font size */
     }
-
+    .navbar {
+        margin-left: 0 !important; /* Remove left margin on small screens */
+    }
 
     /*contact*/
     .contact-info h3 {
