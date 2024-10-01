@@ -1,10 +1,19 @@
 @import 'responsive.css';
 
+/*======================================
+font
+=======================================*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+
 /*=====================================*/
 :root {
     --color: #007bff;
     --primary: #000;
     --secondary: #0056b3;
+    --heading: 'Roboto Slab', serif;
+    --paragraph: 'Open Sans', sans-serif;
+
 }
 
 a{
@@ -213,11 +222,14 @@ Carousel
 .why-learn h2 {
     font-weight: 700;
     color:var(--color);
+    font-family: var(--heading);
+    font-style: italic;
 }
 
 .why-learn p {
     color: #333;
     font-size: 16px;
+    font-family: var(--paragraph);
 }
 
 .why-learn {
@@ -241,7 +253,9 @@ Carousel
 /* Stats Section */
 .stats h2 {
     font-weight: 700;
-    color:var(--secondary);
+    color:var(--color);
+    font-family: var(--heading);
+    font-style: italic;
 }
 
 .stat-item {
@@ -269,6 +283,31 @@ Carousel
     height: 80%;
     margin-left: 10px;
 }
+/*============================
+Vision and Mission
+==============================*/
+
+.mission-vision h2 {
+    color: var(--color); /* Blue for both headings */
+    font-family: var(--heading);
+    font-style: italic;
+}
+.mission-vision p {
+    font-size: 18px;
+   font-family: var(--paragraph);
+}
+
+/* Or different colors for each */
+.mission-vision .mission p {
+    color: var(--color); /* Blue for mission */
+    font-family: var(--heading);
+    font-style: italic;
+}
+
+.mission-vision .vision h2 {
+    color: #e74c3c; /* Red for vision */
+}
+
 
 /*============================
 Contact Page
