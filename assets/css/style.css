@@ -141,9 +141,137 @@ Carousel
 }
 
 
+/*--------------------------------------------------------------
+# notice panel Section
+--------------------------------------------------------------*/
+
+/* Notices */
+
+.notice-panel {
+    padding: 1px 1%;
+    background-color: var(--secondary);
+}
+
+.notices {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    padding: 5px 1%;
+}
+
+.notice-slider .swiper-wrapper {
+    align-items: center;
+}
+
+.notices h5 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.notices .slide-item {
+    padding-right: 60px;
+}
+
+.notices .slide-item a {
+    line-height: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #000000;
+    /* text-shadow:0 0 10px rgb(46, 46, 46); */
+}
+
+.notices :is(.swiper-button-prev,
+.swiper-button-next) {
+    color: var(--accent-color);
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 60%;
+    bottom: auto;
+    right: 0;
+}
+
+.notices :is(.swiper-button-prev,
+.swiper-button-next) i {
+    font-size: 21px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 3%;
+}
+
+.notices .swiper-button-prev {
+    right: 40px !important;
+}
+
+
+
+/* Why Learn at LoGMIEER Section */
+.why-learn h2 {
+    font-weight: 700;
+    color:var(--color);
+}
+
+.why-learn p {
+    color: #333;
+    font-size: 16px;
+}
+
+.why-learn {
+    padding: 50px 0;
+}
+
+.why-learn .why-img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;
+}
+
+.why-learn p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.why-learn .row img {
+    margin: 0 auto;
+}
+
+/* Stats Section */
+.stats h2 {
+    font-weight: 700;
+    color:var(--secondary);
+}
+
+.stat-item {
+    margin-bottom: 20px;
+}
+
+.stat-item i {
+    color: var(--secondary);
+}
+
+.stat-item h4 {
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--primary);
+}
+
+.stat-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+
+.why-img {
+    width: 130px !important;
+    height: 80%;
+    margin-left: 10px;
+}
 
 /*============================
-Contact
+Contact Page
 ==============================*/
 .contact-container {
     margin-top: 50px;
