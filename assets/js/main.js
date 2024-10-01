@@ -1,9 +1,10 @@
-// var tabInterval = setInterval(function() {
-//     var $active = $('#newsTab .nav-link.active');
-//     var $next = $active.parent().next().length ? $active.parent().next().find('.nav-link') : $('#newsTab .nav-link').first();
-//     $next.tab('show');
-// }, 8000);
+// AOS
 
+AOS.init();
+
+
+
+// AOS end
 document.addEventListener("DOMContentLoaded", function () {
     var noticeSwiper = new Swiper(".notice-slider", {
         loop: true,
