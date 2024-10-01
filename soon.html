@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="icon" href="assets/img/navjeevan-sinnar-school-logo.jpg" type="image/x-icon"> <!-- Favicon Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        :root {
+            --coming-soon-color: #333; /* Define a CSS variable for coming soon text color */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('./assets/img/School.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Prevent scrolling */
+            backdrop-filter: blur(2.5px); /* Blur the backdrop */
+        }
+
+        .coming-soon-container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 8px;
+            /* background-color: rgba(255, 255, 255, 0.9); White background with slight transparency */
+            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); Slight shadow for depth */
+        }
+
+        .logo {
+            max-width: 150px; /* Adjust the logo size as needed */
+            margin-bottom: 20px; /* Space between logo and heading */
+        }
+
+        h1 {
+            font-size: 48px; /* Font size for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+            color: var(--color); /* Use the CSS variable for color */
+        }
+
+        p {
+            font-size: 20px; /* Font size for paragraph text */
+            margin-bottom: 30px; /* Space below the paragraph */
+            color: #000; /* Text color */
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; /* Space below the countdown */
+        }
+
+        .time {
+            margin: 0 15px; /* Space between time blocks */
+            text-align: center; /* Center the text */
+        }
+
+        .time span {
+            display: block; /* Stack the time values */
+            font-size: 36px; /* Font size for countdown numbers */
+            font-weight: bold; /* Bold font weight */
+            color: var(--coming-soon-color); /* Use the CSS variable for color */
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 36px; /* Smaller font size for mobile */
+            }
+
+            p {
+                font-size: 18px; /* Smaller paragraph font size for mobile */
+            }
+
+            .time span {
+                font-size: 24px; /* Smaller countdown font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="coming-soon-container col-12 col-md-6 mx-auto"> <!-- Centering using Bootstrap -->
+            <img src="assets/img/navjeevan-sinnar-school-logo.jpg" alt="School Logo" class="logo"> <!-- Logo Image -->
+            <h1>Coming Soon</h1>
+            <p>We are working hard to bring something amazing to you!</p>
+            <div class="countdown">
+                <div class="time">
+                    <span id="days">00</span>
+                    <span>Days</span>
+                </div>
+                <div class="time">
+                    <span id="hours">00</span>
+                    <span>Hours</span>
+                </div>
+                <div class="time">
+                    <span id="minutes">00</span>
+                    <span>Minutes</span>
+                </div>
+                <div class="time">
+                    <span id="seconds">00</span>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <p>Stay tuned!</p>
+        </div>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            const now = new Date().getTime(); // Get today's date and time
+            const distance = countDownDate - now; // Find the distance between now and the countdown date
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the elements with respective IDs
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // If the countdown is over, display some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".coming-soon-container").innerHTML = "<h1>We're Live!</h1>";
+            }
+        }, 1000);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

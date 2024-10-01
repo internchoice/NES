@@ -308,12 +308,180 @@ Vision and Mission
     color: #e74c3c; /* Red for vision */
 }
 
+/*============================
+Faculty Page
+==============================*/
+
+.faculty-banner {
+    background-image: url('../img/school.jpg'); /* Replace with your banner image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    height: 300px; /* Set the height of the banner */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better visibility */
+    position: relative; /* Ensure positioning is correct */
+}
+/* Add a backdrop effect */
+.faculty-banner::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black backdrop */
+    z-index: 1; /* Place it below the text */
+}
+
+.faculty-banner h1, .faculty-banner p {
+    position: relative; /* Position text above the backdrop */
+    z-index: 2; /* Place it above the backdrop */
+}
+
+
+
+.breadcrumb {
+    z-index: 2; /* Place above the backdrop */
+    position: relative; /* Ensure positioning is correct */
+    background-color: transparent; /* Keep background transparent */
+    padding: 10px 0; /* Add padding above and below */
+    margin: 10px 0; /* Margin around breadcrumb for spacing */
+    font-size: 22px; /* Font size for breadcrumb */
+    color: white; /* Set text color to white for visibility */
+}
+
+.breadcrumb-item a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.breadcrumb-item.active {
+    color: var(--color); /* Use the defined CSS variable for the current page */
+    font-weight: bold;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: white; /* Color for the separator */
+}
+
+h1 {
+    margin-bottom: 10px; /* Space between h1 and breadcrumb */
+    text-align: center; /* Center align h1 */
+}
+
+ /* Custom Styles */
+ .faculty-section {
+
+    padding: 50px 0;
+}
+
+.faculty-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.faculty-title h2{
+font-family: var(--heading);
+font-style: italic;
+color: var(--color);
+}
+.faculty-title h5{
+    font-family: var(--paragraph);
+    
+    
+}
+    .faculty-card {
+        border: none;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.85); /* Light background for the card */
+        transition: background-color 0.3s ease; /* Smooth transition */
+        max-width: 250px; /* Set a max width */
+        min-height: 300px; /* Increase the height of the card */
+        margin: 15px auto; /* Center horizontally and add vertical spacing */
+        
+        display: flex; /* Enable Flexbox */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children horizontally */
+        justify-content: center; /* Center children vertically */
+    
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        margin-left: 50px !important;
+    }
+
+.faculty-card:hover {
+    background-color: #3498db; /* Choose your desired hover color */
+}
+
+.faculty-card img {
+    border-radius: 50%; /* Circular image */
+    width: 120px; /* Set width */
+    height: 120px; /* Set height */
+    object-fit: cover; /* Cover the area */
+    margin-bottom: 15px; /* Space below the image */
+    transition: transform 0.3s ease; /* Smooth movement */
+}
+
+.faculty-card:hover img {
+    transform: translateY(-20px); /* Move the image up */
+}
+
+.faculty-card h5 {
+    margin-top: 15px; /* Space above the name */
+    font-size: 1.2rem; /* Font size */
+    font-style: italic;
+    font-weight: bold;
+}
+
+.faculty-card .qualifications {
+    font-weight: 500;
+    position: absolute; /* Position qualifications */
+    bottom: -50px; /* Initially hidden */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    font-size: 1rem; /* Font size */
+    color: #fff; /* Text color */
+    opacity: 0; /* Initially hidden */
+    transition: bottom 0.3s ease, opacity 0.3s ease; /* Smooth reveal */
+}
+
+.faculty-card:hover .qualifications {
+    bottom: 20px; /* Move up to reveal */
+    opacity: 1; /* Make visible */
+}
+
+/* Adjusting margins for the row of cards */
+.row {
+    margin-left: -15px; /* Reduce space between columns */
+    margin-right: -15px; /* Reduce space between columns */
+}
+
+/* Adding spacing between the cards vertically */
+.faculty-card {
+    margin: 15px 0; /* Add vertical spacing (15px) and remove side spacing */
+}
 
 /*============================
 Contact Page
 ==============================*/
 .contact-container {
     margin-top: 50px;
+}
+
+.contact-container h2 {
+    color: var(--color);
+    font-family: var(--heading);
+    font-style: italic;
+}
+.contact-container p {
+
+    font-family: var(--paragraph);
+ 
 }
 
 .contact-info {
@@ -350,6 +518,8 @@ Contact Page
 }
 
 .card-body p {
+    color: var(--color);
+    font-family: var(--heading);
     margin: 10px 0;
 }
 
@@ -395,3 +565,4 @@ Footer
   height: 15px !important;
   margin: 0 2px 3px 0;
   } 
+ 
