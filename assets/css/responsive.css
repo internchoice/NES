@@ -190,3 +190,24 @@
         scroll-margin-top: 76px;
     }
 }
+
+
+/*==================
+Social Link
+=================*/
+
+
+@media screen and (max-width: 480px) {
+	.pccoe-sm-bar { padding: 5px 10px 0px 5px; background: none; }
+.pccoe-sm-bar img{ width: 87%; }
+	
+}
+
+@media only screen 
+	  and (min-device-width: 360px) 
+	  and (max-device-width: 740px)
+	  and (-webkit-min-device-pixel-ratio: 2)
+	  and (orientation: landscape) {
+		.wmh-logo img { width: 20%; }
+.pccoe-sm-bar img{ width: 87%; }
+}
