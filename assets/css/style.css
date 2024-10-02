@@ -1324,3 +1324,95 @@ pre page
     right: -34%;
 }
 
+/*===================================
+Facilities
+====================================*/
+
+.library h2{
+    color: var(--color);
+    font-family: var(--heading);
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+.library p{
+    font-family: var(--paragraph);
+    text-align: center;
+}
+ .library h3{
+    color: var(--color);
+    font-family: var(--heading);
+}
+
+.laboratory h2{
+    color: var(--color);
+    font-family: var(--heading);
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+.laboratory p{
+    font-family: var(--paragraph);
+    text-align: center;
+}
+ .laboratory h3{
+    color: var(--color);
+    font-family: var(--heading);
+}
+
+.bus h2{
+    color: var(--color);
+    font-family: var(--heading);
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+.bus p{
+    font-family: var(--paragraph);
+    text-align: center;
+}
+
+.bus h3{
+    color: var(--color);
+    font-family: var(--heading);
+}
+ .sport h2{
+    color: var(--color);
+    font-family: var(--heading);
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+ .sport p{
+    font-family: var(--paragraph);
+    text-align: center;
+}
+.sport h3{
+    color: var(--color);
+    font-family: var(--heading);
+}
+
+.career h2{
+    color: var(--color);
+    font-family: var(--heading);
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+.career p{
+    font-family: var(--paragraph);
+    text-align: center;
+}
+
+.career h3{
+    color: var(--color);
+    font-family: var(--heading);
+}
+
+.card {
+    text-align: center;
+}
+
+.img-fluid {
+    border-radius: 8px;
+}
