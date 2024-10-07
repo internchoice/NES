@@ -207,3 +207,51 @@ document.addEventListener('DOMContentLoaded', function() {
 //     setupTabs('.school-tab li', '.content09 > section');
 //     setupTabs('.curriculum-tab li', '.curriculum-content > section');
 // });
+
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+
+
+// JavaScript to open and close the modal
+window.onload = function () {
+  // Get the modal
+  var modal = document.getElementById("popupModal");
+
+  // Get the close button
+  var closeBtn = document.querySelector(".close");
+
+  // Open the modal on page load
+  modal.style.display = "flex";
+
+  // Close the modal when the user clicks on the close button
+  closeBtn.onclick = function () {
+      modal.style.display = "none";
+  }
+
+  // Close the modal when the user clicks anywhere outside of the modal content
+  window.onclick = function (event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+  // Automatically close the modal after 5 seconds
+  setTimeout(function () {
+      modal.style.display = "none";
+  }, 7000); // 5000 milliseconds = 5 seconds
+}
+

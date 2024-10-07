@@ -1,4 +1,6 @@
 @import 'responsive.css';
+@import 'extra.css';
+
 
 /*======================================
 font
@@ -14,6 +16,7 @@ font
     --footer: #b32a00;
     --heading: 'Roboto Slab', serif;
     --paragraph: 'Open Sans', sans-serif;
+    --background_color: #ffb43fe8;
 
 }
 
@@ -633,6 +636,21 @@ h1 {
 /*============================
 Contact Page
 ==============================*/
+.e-card-cont {
+    left: 100px;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.e-card-cont:hover {
+    transform: scale(1.05); /* Slightly increases size on hover */
+    box-shadow: 0px 12px 30px -9px rgba(0, 0, 0, 0.65); /* Darker shadow on hover */
+}
 .contact-container {
     margin-top: 50px;
 }
@@ -1392,6 +1410,10 @@ Facilities
     font-family: var(--heading);
 }
 
+/*===================================
+Career
+====================================*/
+
 .career h2{
     color: var(--color);
     font-family: var(--heading);
@@ -1405,8 +1427,10 @@ Facilities
 }
 
 .career h3{
+    text-align: center;
     color: var(--color);
     font-family: var(--heading);
+    font-style: italic;
 }
 
 .card {
@@ -1415,4 +1439,176 @@ Facilities
 
 .img-fluid {
     border-radius: 8px;
+}
+
+.e-card {
+    background: transparent; /* Transparent background */
+    box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45); /* Shadow for depth */
+    position: relative; /* Relative positioning for child elements */
+    width: 480px; /* Increased width for the card */
+    height: 200px; /* Fixed height for the card */
+    border-radius: 16px; /* Rounded corners */
+    overflow: hidden; /* Hides overflow content */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.e-card:hover {
+    transform: scale(1.05); /* Slightly increases size on hover */
+    box-shadow: 0px 12px 30px -9px rgba(0, 0, 0, 0.65); /* Darker shadow on hover */
+}
+
+/* Additional styles for waves and content */
+.wave {
+    position: absolute;
+    width: 540px;
+    height: 700px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -20%;
+    margin-top: -70%;
+    background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+    border-radius: 40%;
+    animation: wave 55s infinite linear; /* Keep the wave effect */
+    z-index: 0; /* Place waves behind the content */
+}
+
+.infotop {
+    text-align: center; /* Center align the content */
+    font-size: 16px; /* Font size for text */
+    position: relative; /* Change to relative positioning */
+    color: rgb(255, 255, 255); /* White text color */
+    font-weight: 600; /* Bold text */
+    z-index: 1; /* Ensure content appears above the waves */
+    padding: 20px; /* Padding for better spacing */
+}
+
+.card-title {
+    margin: 10px 0; /* Added margin for better spacing */
+}
+
+.card-text {
+    margin: 10px 0; /* Added margin for better spacing */
+}
+
+.btn-primary {
+    margin-top: 10px; /* Added margin for spacing between text and button */
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.card-title {
+    margin: 10px 0; /* Added margin for better spacing */
+}
+
+.card-text {
+    margin: 10px 0; /* Added margin for better spacing */
+}
+
+.btn-primary {
+    margin-top: 10px; /* Added margin for spacing between text and button */
+}
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 210px;
+}
+
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 3000ms infinite linear;
+}
+
+.wave {
+  border-radius: 40%;
+  animation: wave 55s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+  animation-duration: 4000ms;
+}
+
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+  animation-duration: 5000ms;
+}
+
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*===================================
+Placement
+====================================*/
+.card-header{
+    background-color: var(--color);
+}
+
+.custom-button {
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1rem;
+    text-transform: capitalize;
+    border: 1px solid #ddd; 
+    color: #495057; 
+    font-weight: 500; 
+    text-align: left; 
+    padding: 10px 15px; 
+    transition: none; 
+  }
+  .custom-button i {
+    transition: none; 
+  }
+  .custom-button:focus {
+    box-shadow: none; 
+    outline: none; 
+  }
+  
+  .text-danger{
+    color:var(--color) !important;
+    font-family: var(--heading);
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .card-body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.25rem; /* Rounded corners */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+  }
+  .img-fluid-gallery {
+    box-shadow: 0 0 10px rgb(100, 99, 99);
+    border-radius: 10px;
+    width: 100%; /* Makes the image take the full width of its container */
+    height: 200px; /* Increased fixed height */
+    object-fit: cover; /* Ensures the image covers the div without stretching */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+}
+
+.img-fluid-gallery:hover {
+    transform: scale(1.05); /* Slightly scales the image on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow on hover */
 }
