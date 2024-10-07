@@ -86,9 +86,20 @@
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="coming-soon-container col-12 col-md-6 mx-auto"> <!-- Centering using Bootstrap -->
-            <img src="assets/img/navjeevan-sinnar-school-logo.jpg" alt="School Logo" class="logo"> <!-- Logo Image -->
+        <div class="row justify-content-center"> <!-- Row for grid layout -->
+            <div class="col-12 col-md-6  justify-content-between align-items-center"> <!-- Aligning side-by-side -->
+                <a href="index.html"> <!-- Clickable link for the logo -->
+                    <img src="assets/img/navjeevan-sinnar-school-logo.jpg" alt="School Logo" class="logo" style="height: 100px;">
+                </a>
+                <a href="index.html"> <!-- Clickable link for the text logo -->
+                    <img src="assets/img/text-logo.jpg" alt="Text Logo" style="height: 80px;">
+                </a>
+            </div>
+        </div>
+        
+        <div class="coming-soon-container col-12 col-md-6 mx-auto">
             <h1>Coming Soon</h1>
             <p>We are working hard to bring something amazing to you!</p>
             <div class="countdown">
@@ -112,6 +123,7 @@
             <p>Stay tuned!</p>
         </div>
     </div>
+    
 
     <script>
         // Set the date we're counting down to
